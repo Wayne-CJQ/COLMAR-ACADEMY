@@ -1,0 +1,617 @@
+
+/* There is no information of color provided in the spec document
+
+so I use a color inspection tool built in MAC OS instead which is called "Digital Color Meter"
+
+to get the rgb values from the pictures in the spec file, and consequently, the way I color my elements
+
+in this css stylesheet will look a little bit messy. Fortunately, I throw all the color settings
+
+into the Color Implementation section, which can make the code more concise.*/
+
+*{
+  margin:0;
+  padding:0
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(107, 107, 107);
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+}
+/* ////////////////////--Color Implementation-- //////////////////////////////*/
+
+.part-one{
+  color: rgb(79, 79, 79);
+}
+
+.part-two{
+  color: rgb(149, 149, 149);
+}
+
+.f74f{
+  color: rgb(74, 74, 74);
+}
+
+.f68f{
+  color: rgb(68, 68, 68);
+}
+
+.f216f{
+  background-color: rgb(216, 216, 216);
+}
+
+.f74f{
+  color: rgb(74, 74, 74);
+}
+
+.start-here{
+  color: white;
+  background-color: rgb(74, 74, 74);
+}
+
+.f120f{
+  color: rgb(120,120,120);
+}
+
+.f111f{
+  color: rgb(111, 111, 111);
+}
+
+.f140f{
+  color: rgb(140, 140, 140);
+}
+
+.f84-162-226f{
+  color: rgb(84,162,226);
+}
+
+.insert-background-color{
+  background-color: rgb(234, 235, 236);
+}
+
+.square{
+  background-color: white;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+
+/*///////////////////////////////--Header Style--/////////////////////////////*/
+.links-mobile{
+  display: none;
+}
+
+.header{
+  /* border: 5px red solid; */
+  height: 64px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  /* border: 3px blue solid; */
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  /* border: 3px blueviolet solid; */
+  height: 100%;
+}
+
+.logo span{
+  /* border: 3px blueviolet solid; */
+  line-height: 32px;
+}
+
+.links{
+  /* border: 3px blue solid; */
+  height: 32px;
+  display: flex;
+  align-items: center;
+  line-height: 32px;
+}
+
+.links a{
+  /* border: 3px blueviolet solid; */
+  margin-left: 16px;
+}
+
+@media only screen and (max-width: 460px) {
+  .desktop{
+    display: none;
+  }
+
+  .links-mobile{
+    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .links-mobile img{
+    /* border: 3px Chartreuse solid; */
+    height: 100%;
+  }
+
+  .header{
+    padding: 16px 32px;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+
+/* //////////////////////////--Banner Style--//////////////////////////////// */
+
+.banner{
+  /* border: 5px red solid; */
+  display: flex;
+}
+
+.image-banner{
+  /* border: 3px blue solid; */
+  width: 60%;
+  overflow: hidden;
+  margin: 32px 24px;
+}
+
+.image-banner img{
+  /* border: 3px blueviolet solid; */
+  width: 100%;
+  display: block;
+}
+
+.container{
+  /* border: 3px blue solid; */
+  margin: 32px 0 32px 0;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container h1, .container h2{
+  /* border: 3px blueviolet solid; */
+  margin-bottom: 12px;
+}
+
+.container .double-margin{
+  margin-bottom: 24px;
+}
+
+.container a{
+  /* border: 3px blueviolet solid; */
+  padding: 8px;
+  text-align: center;
+}
+
+.start-here{
+  width: 50%;
+}
+
+@media only screen and (max-width: 460px) {
+  .banner{
+    flex-direction: column;
+  }
+
+  .image-banner{
+    margin: 0;
+    width: 100%;
+  }
+
+  .container{
+    margin: 0;
+    width: 100%;
+  }
+
+  .container h1, .container h2{
+    margin: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 12px;
+  }
+
+  .container .double-margin{
+    margin-bottom: 0;
+  }
+
+  .container .margin-mobile{
+    margin-top: 32px;
+  }
+
+  .container .mobile-here{
+    padding: 0;
+    padding: 8px 0;
+    width: auto;
+    margin: 24px 16px 32px 16px;
+    background-color: rgb(155, 155, 155);
+  }
+
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+/* /////////////////////////--Gallery Style--//////////////////////////////// */
+
+ .column-right .image-mobile, .mobile-h3{
+  display: none;
+}
+
+.middle-page{
+  /* border: 5px red solid; */
+  padding: 16px 0 0 24px;
+  display: flex;
+}
+
+.column-left{
+  /* border: 3px blue solid; */
+  width: 60%;
+  margin-bottom: 32px;
+  margin-top: 16px;
+}
+
+.column-right{
+  /* border: 3px blue solid; */
+  width: 40%;
+  margin-left: 24px;
+  padding: 0 16px 0 16px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-big{
+  /* border: 3px darkgreen solid; */
+  width: 100%;
+}
+
+.gallery-small{
+  /* border: 3px darkgreen solid; */
+  width: 100%;
+  display: flex;
+}
+
+.image-big{
+  /* border: 3px blueviolet solid; */
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.image-small{
+  /* border: 3px blueviolet solid; */
+  width: 35%;
+  overflow: hidden;
+  margin: 16px 16px 16px 0;
+}
+
+.container-big{
+  /* border: 3px blueviolet solid; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-small{
+  /* border: 3px blueviolet solid; */
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 16px 0;
+}
+
+.bold-big{
+  margin-bottom: 24px;
+}
+
+.bold-small{
+  margin-bottom: 8px;
+}
+
+.address{
+  margin-top: 32px;
+}
+
+.middle-page h2,
+.middle-page h3,
+.middle-page span,
+.middle-page a{
+  /* border: 3px orange solid; */
+}
+
+.middle-page img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.extention{
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 460px) {
+
+  .desktop-h3{
+    display: none;
+  }
+
+  .mobile-h3{
+    display: inline-block;
+  }
+
+
+
+  .middle-page{
+    padding: 0;
+    padding: 16px 16px 32px 16px;
+  }
+
+  .column-left{
+    display: none;
+  }
+
+  .column-right{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .column-right .image-desktop{
+   display: none;
+  }
+
+  .image-small{
+    margin: 0;
+    width: 100%;
+  }
+
+  .column-right .image-mobile{
+   display: block;
+ }
+
+  .container-small{
+    margin: 0;
+    width: 100%;
+  }
+
+  .gallery-small{
+    flex-direction: column;
+  }
+
+  .margin-middle{
+    margin: 64px 0;
+  }
+
+  .words-small{
+    margin-bottom: 8px;
+  }
+
+
+  .bold-small{
+    margin-top: 24px;
+  }
+
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+
+
+/* /////////////////////////--Subtitle Style--/////////////////////////////// */
+
+.subtitle{
+  /* border: 5px red solid; */
+  padding: 32px 72px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 460px) {
+
+.insert-background-color{
+  background-color: white;
+}
+
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+
+/* /////////////--Gallery Style for the Second Gallery Section--//////////////*/
+.mobile-anchor{
+  display: none;
+}
+.second-gallery{
+  /* border: 5px red solid; */
+  padding: 0 72px 16px 72px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square{
+  /* border: 3px blue solid; */
+  width: 30%;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.image-square{
+  /* border: 3px blueviolet solid; */
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.container-square{
+  /* border: 3px blueviolet solid; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.square-bold{
+  /* border: 3px orange solid; */
+  margin-bottom: 16px;
+  margin-left: 16px;
+}
+
+.words-square{
+  /* border: 3px orange solid; */
+  margin-left: 16px;
+}
+
+.second-gallery img{
+  /* border: 5px Chartreuse solid; */
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.less-margin{
+  margin-top: 8px;
+}
+
+.course{
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 460px) {
+
+  .insert-background-color{
+    background-color: white;
+  }
+
+  .desktop-square{
+    display: none;
+  }
+
+  .mobile-anchor{
+    /* border: 3px blue solid; */
+    display: inline-block;
+    padding: 16px 0 24px 16px;
+    margin-bottom: 8px;
+    background-color: rgb(216, 216, 216);
+    color: rgb(67, 67, 67);
+    font-weight: 500;
+  }
+
+  .second-gallery{
+    flex-direction: column;
+    padding: 0;
+    padding: 0 16px 24px 16px;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////--Bottom Page Style--////////////////////////////// */
+
+.bottom-page{
+  /* border: 5px red solid; */
+  padding: 16px 0 0 24px;
+  display: flex;
+}
+  /* modified */
+
+
+.bottom-right{
+  /* border: 3px blue solid; */
+  width: 40%;
+  margin-left: 24px;
+  padding: 0 16px 0 16px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+  /* modified */
+
+
+.bottom-page h2,
+.bottom-page h3,
+.bottom-page span,
+.bottom-page a{
+  /* border: 3px orange solid; */
+}
+  /* modified */
+
+
+.bottom-page img, .bottom-page video{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+   /* modified */
+
+   @media only screen and (max-width: 460px) {
+
+     .bottom-page{
+       padding: 0;
+     }
+
+     .desktop-bottom{
+       display: none;
+     }
+
+     .mobile-video{
+       display: inline-block;
+       margin: 0;
+       width: 100%;
+     }
+
+     .bottom-right{
+       padding: 0;
+       margin: 0;
+     }
+
+     .video-window{
+       margin: 0;
+     }
+   }
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////--Footer Section-- /////////////////////////////*/
+
+footer{
+  /* border: 5px red solid; */
+  padding: 16px 24px 32px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left{
+  /* border: 3px blue solid; */
+}
+
+.footer-right{
+  /* border: 3px blue solid; */
+}
+
+@media only screen and (max-width: 460px) {
+
+  footer{
+    padding: 0;
+    padding: 40px 0 16px 24px;
+  }
+
+  .desktop-footer{
+    display: none;
+  }
+}
+/* ////////////////////////////////////////////////////////////////////////// */
